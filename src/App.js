@@ -20,7 +20,7 @@ function App() {
   return (
     <AppContainer>
       <RepoLink href="https://github.com/jtaavola/breathe" target="_blank">
-        <SiGithub size="1.5em" title="Repo link" />
+        <SiGithub color="black" size="1.5em" title="Repo link" />
       </RepoLink>
       <BoxBreathingGuide />
     </AppContainer>
