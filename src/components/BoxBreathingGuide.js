@@ -64,10 +64,13 @@ const CircleGuide = styled.div`
   }
 `;
 
-const BoxBreathingGuide = ({ children }) => {
+const BoxBreathingGuide = ({ onRestart, children }) => {
   return (
     <Box>
-      <CircleGuide diameter="2" />
+      <CircleGuide
+        onAnimationStart={(e) => onRestart(e.timeStamp)}
+        diameter="2"
+      />
       {children}
     </Box>
   );

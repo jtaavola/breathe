@@ -26,7 +26,7 @@ const TextGuide = styled.p`
 
 const instructionList = ['Inhale', 'Hold', 'Exhale', 'Hold'];
 
-const Instructions = () => {
+const Instructions = ({ animationId }) => {
   const [instruction, setInstruction] = useState(instructionList[0]);
   const [iteration, setIteration] = useState(0);
   const incrementIteration = () => setIteration(iteration + 1);
@@ -35,8 +35,12 @@ const Instructions = () => {
     setInstruction(instructionList[iteration % 4]);
   }, [iteration]);
 
+  useEffect(() => {
+    setIteration(0);
+  }, [animationId]);
+
   return (
-    <TextGuide onAnimationIteration={incrementIteration}>
+    <TextGuide key={animationId} onAnimationIteration={incrementIteration}>
       {instruction}
     </TextGuide>
   );
