@@ -34,6 +34,9 @@ const Box = styled.div`
   height: 40vw;
   border: 1.5rem solid lightblue;
   border-radius: 5%;
+  align-items: center;
+  justify-content: center;
+  display: flex;
   /* fixed width & height for large screens */
   @media only screen and (min-width: 992px) {
     width: 25rem;
@@ -61,10 +64,11 @@ const CircleGuide = styled.div`
   }
 `;
 
-const BoxBreathingGuide = () => {
+const BoxBreathingGuide = ({ children }) => {
   return (
     <Box>
       <CircleGuide diameter="2" />
+      {children}
     </Box>
   );
 };
