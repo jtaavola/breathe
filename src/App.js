@@ -48,6 +48,7 @@ function App() {
         <Instructions animationId={animationId} hidden={zenMode} />
       </BoxBreathingGuide>
       <ZenModeToggle
+        aria-label="Zen mode toggle"
         size="xl"
         onChange={(event) => setZenMode(event.currentTarget.checked)}
         offLabel={<GiMeditation size={'2em'} />}
