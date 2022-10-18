@@ -3,6 +3,8 @@ import BoxBreathingGuide from './components/BoxBreathingGuide';
 import { SiGithub } from 'react-icons/si';
 import Instructions from './components/Instructions';
 import { useState } from 'react';
+import { Switch } from '@mantine/core';
+import { GiMeditation } from 'react-icons/gi';
 
 const AppContainer = styled.div`
   align-items: center;
@@ -20,17 +22,36 @@ const RepoLink = styled.a`
   right: 0.5rem;
 `;
 
+const Title = styled.h1`
+  margin-bottom: 1em;
+  font-size: 3em;
+  @media (max-width: 576px) {
+    font-size: 2em;
+  }
+`;
+
+const ZenModeToggle = styled(Switch)`
+  margin-top: 3em;
+`;
+
 function App() {
   const [animationId, setAnimationId] = useState(null);
+  const [zenMode, setZenMode] = useState();
 
   return (
     <AppContainer>
       <RepoLink href="https://github.com/jtaavola/breathe" target="_blank">
         <SiGithub color="black" size="1.5em" title="Repo link" />
       </RepoLink>
+      {!zenMode && <Title>Box Breathing</Title>}
       <BoxBreathingGuide onRestart={setAnimationId}>
-        <Instructions animationId={animationId} />
+        <Instructions animationId={animationId} hidden={zenMode} />
       </BoxBreathingGuide>
+      <ZenModeToggle
+        size="xl"
+        onChange={(event) => setZenMode(event.currentTarget.checked)}
+        offLabel={<GiMeditation size={'2em'} />}
+      />
     </AppContainer>
   );
 }
