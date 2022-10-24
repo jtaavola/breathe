@@ -43,7 +43,7 @@ function App() {
       <RepoLink href="https://github.com/jtaavola/breathe" target="_blank">
         <SiGithub color="black" size="1.5em" title="Repo link" />
       </RepoLink>
-      {!zenMode && <Title>Box Breathing</Title>}
+      {!zenMode && <Title>Box Breathing Animation</Title>}
       <BoxBreathingGuide onRestart={setAnimationId}>
         <Instructions animationId={animationId} hidden={zenMode} />
       </BoxBreathingGuide>
