@@ -1,12 +1,12 @@
 {
   "files": {
-    "main.js": "/breathe/static/js/main.9a1c3fdb.js",
-    "static/js/787.12791cf9.chunk.js": "/breathe/static/js/787.12791cf9.chunk.js",
-    "index.html": "/breathe/index.html",
-    "main.9a1c3fdb.js.map": "/breathe/static/js/main.9a1c3fdb.js.map",
-    "787.12791cf9.chunk.js.map": "/breathe/static/js/787.12791cf9.chunk.js.map"
+    "main.js": "/static/js/main.44519b5d.js",
+    "static/js/787.12791cf9.chunk.js": "/static/js/787.12791cf9.chunk.js",
+    "index.html": "/index.html",
+    "main.44519b5d.js.map": "/static/js/main.44519b5d.js.map",
+    "787.12791cf9.chunk.js.map": "/static/js/787.12791cf9.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.9a1c3fdb.js"
+    "static/js/main.44519b5d.js"
   ]
 }
