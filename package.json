@@ -1,7 +1,7 @@
 {
   "name": "breathe",
   "version": "0.1.0",
-  "homepage": "https://jtaavola.github.io/breathe",
+  "homepage": "https://breathe-chi.vercel.app",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.4",
